@@ -2,6 +2,10 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
+body {
+  overflow: hidden;
+}
+
 .loading {
   margin: auto;
   width: 98vh;
@@ -21,7 +25,7 @@
 .topRow {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 10px 0px;
   font-size: 40px;
   width: 95%;
 }

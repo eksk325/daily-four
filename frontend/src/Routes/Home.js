@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/Home.module.css";
+import Task from "../js/Task";
 
 function Home() {
   const [greeting, setGreeting] = useState("");
@@ -9,7 +10,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   // GET DARK MODE SETTINGS FROM DATABASE !!!
-  const [dark, setDark] = useState(false);
+  const [darkmode, setDarkmode] = useState(localStorage.getItem("darkmode"));
 
   const navigate = useNavigate();
 
@@ -49,7 +50,7 @@ function Home() {
   });
 
   const changeMode = () => {
-    dark ? setDark(false) : setDark(true);
+    darkmode ? setDarkmode(false) : setDarkmode(true);
     // UPDATE DARK MODE SETTINGS TO DATABASE !!!!
   };
 
@@ -58,11 +59,11 @@ function Home() {
   };
 
   return (
-    <div className={dark ? styles.darkmode : styles.lightmode}>
+    <div className={darkmode ? styles.darkmode : styles.lightmode}>
       {loading ? (
         <div
           className={styles.loading}
-          style={{ color: dark ? "white" : "black" }}
+          style={{ color: darkmode ? "white" : "black" }}
         >
           <h1>Loading...</h1>
         </div>
@@ -75,7 +76,7 @@ function Home() {
               </div>
               <div className={styles.greeting}>{greeting}</div>
               <div className={styles.switch} onClick={changeMode}>
-                {dark ? (
+                {darkmode ? (
                   <i className="fa-solid fa-circle-half-stroke"></i>
                 ) : (
                   <i className="fa-regular fa-moon"></i>
@@ -85,6 +86,7 @@ function Home() {
             <div className={styles.time}>{time}</div>
             <div className={styles.date}>{date}</div>
           </div>
+          <Task date={date} darkmode={darkmode} />
         </div>
       )}
     </div>
