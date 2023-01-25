@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import styles from "../styles/Home.module.css";
 
 function Home() {
   const [greeting, setGreeting] = useState("");
@@ -56,7 +57,38 @@ function Home() {
     navigate("/past");
   };
 
-  return <div></div>;
+  return (
+    <div className={dark ? styles.darkmode : styles.lightmode}>
+      {loading ? (
+        <div
+          className={styles.loading}
+          style={{ color: dark ? "white" : "black" }}
+        >
+          <h1>Loading...</h1>
+        </div>
+      ) : (
+        <div>
+          <div className={styles.banner}>
+            <div className={styles.topRow}>
+              <div onClick={switchToPast}>
+                <i className="fa-regular fa-calendar"></i>
+              </div>
+              <div className={styles.greeting}>{greeting}</div>
+              <div className={styles.switch} onClick={changeMode}>
+                {dark ? (
+                  <i className="fa-solid fa-circle-half-stroke"></i>
+                ) : (
+                  <i className="fa-regular fa-moon"></i>
+                )}
+              </div>
+            </div>
+            <div className={styles.time}>{time}</div>
+            <div className={styles.date}>{date}</div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default Home;
