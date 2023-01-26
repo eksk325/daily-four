@@ -9,8 +9,9 @@ function Home() {
   const [date, setDate] = useState("");
   const [loading, setLoading] = useState(true);
 
-  // GET DARK MODE SETTINGS FROM DATABASE !!!
-  const [darkmode, setDarkmode] = useState(localStorage.getItem("darkmode"));
+  const [darkmode, setDarkmode] = useState(
+    localStorage.getItem("darkmode") === true
+  );
 
   const navigate = useNavigate();
 
@@ -47,11 +48,16 @@ function Home() {
       // After all time components are loaded, set loading to false
       setLoading(false);
     }, 1000);
-  });
+  }, []);
 
   const changeMode = () => {
-    darkmode ? setDarkmode(false) : setDarkmode(true);
-    // UPDATE DARK MODE SETTINGS TO DATABASE !!!!
+    if (darkmode) {
+      setDarkmode(false);
+      localStorage.setItem("darkmode", false);
+    } else {
+      setDarkmode(true);
+      localStorage.setItem("darkmode", true);
+    }
   };
 
   const switchToPast = () => {

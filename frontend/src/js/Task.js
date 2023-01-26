@@ -90,7 +90,7 @@ function Task({ date, darkmode }) {
 
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <div className={styles.container}>
+      <div className={darkmode ? styles.containerDark : styles.container}>
         {taskArray.map((task) => (
           <div
             className={task.active ? styles.taskActive : styles.task}

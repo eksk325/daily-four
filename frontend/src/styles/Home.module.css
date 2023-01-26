@@ -4,12 +4,23 @@
 
 body {
   overflow: hidden;
+  margin: 0;
+}
+
+.darkmode {
+  background-color: black;
+  color: white;
+}
+
+.lightmode {
+  background-color: white;
+  color: black;
 }
 
 .loading {
   margin: auto;
-  width: 98vh;
-  height: 98vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
