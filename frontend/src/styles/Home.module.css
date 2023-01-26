@@ -1,5 +1,6 @@
 * {
   font-family: "Noto Sans JP", sans-serif;
+  user-select: none;
 }
 
 body {
@@ -35,8 +36,8 @@ body {
 
 .topRow {
   display: flex;
-  justify-content: space-between;
-  padding: 10px 0px;
+  justify-content: center;
+  padding: 20px 0px;
   font-size: 40px;
   width: 95%;
 }
@@ -53,4 +54,10 @@ i:hover {
 .date {
   font-size: 20px;
   padding: 5px;
+}
+
+.switch {
+  position: absolute;
+  padding: 15px 25px;
+  font-size: 35px;
 }

@@ -1,0 +1,12 @@
+* {
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  font-size: 40px;
+  width: 95%;
+  margin: auto;
+  align-items: center;
+}

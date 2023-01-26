@@ -75,19 +75,16 @@ function Home() {
         </div>
       ) : (
         <div>
+          <div className={styles.switch} onClick={changeMode}>
+            {darkmode ? (
+              <i className="fa-solid fa-circle-half-stroke"></i>
+            ) : (
+              <i className="fa-regular fa-moon"></i>
+            )}
+          </div>
           <div className={styles.banner}>
             <div className={styles.topRow}>
-              <div onClick={switchToPast}>
-                <i className="fa-regular fa-calendar"></i>
-              </div>
               <div className={styles.greeting}>{greeting}</div>
-              <div className={styles.switch} onClick={changeMode}>
-                {darkmode ? (
-                  <i className="fa-solid fa-circle-half-stroke"></i>
-                ) : (
-                  <i className="fa-regular fa-moon"></i>
-                )}
-              </div>
             </div>
             <div className={styles.time}>{time}</div>
             <div className={styles.date}>{date}</div>
