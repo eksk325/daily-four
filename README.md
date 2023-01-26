@@ -7,6 +7,8 @@ This web-app is deployed through GitHub pages -> [Daily Four](https://mseo447.gi
 * There are four cards, each representing a task. 
 * When the task time is clicked, the timer starts running immediately.
 * Dark mode is also available (button @ top left corner)
+* The data is saved in the local storage
+* The timer for all tasks are reset on a daily basis to 00:00:00
 
 <img width="1440" alt="스크린샷 2023-01-26 오후 4 54 08" src="https://user-images.githubusercontent.com/90244113/214755465-cc1d3d1e-2a16-4081-a9d7-c06dd3f4e24d.png">
 <img width="1440" alt="스크린샷 2023-01-26 오후 4 54 26" src="https://user-images.githubusercontent.com/90244113/214755471-621a4b5a-3ca6-4b55-9c18-ea40f45d06c6.png">
