@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/daily-four/static/css/main.d18bd6ae.css",
+    "main.js": "/daily-four/static/js/main.8ce7bd52.js",
+    "index.html": "/daily-four/index.html",
+    "main.d18bd6ae.css.map": "/daily-four/static/css/main.d18bd6ae.css.map",
+    "main.8ce7bd52.js.map": "/daily-four/static/js/main.8ce7bd52.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d18bd6ae.css",
+    "static/js/main.8ce7bd52.js"
+  ]
+}
