@@ -1,7 +1,7 @@
 # Daily Four 🧿 
 > Timer web-app that tracks 4 daily tasks
 
-This web-app is deployed through GitHub pages -> [Daily Four](https://eksk325.github.io/daily-four/)
+*This web-app is deployed through GitHub pages -> [Daily Four](https://eksk325.github.io/daily-four/)*
 
 * Displays the current time and date, and also a greeting message according to the current time.
 * There are four cards, each representing a task. 
