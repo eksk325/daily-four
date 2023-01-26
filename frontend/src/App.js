@@ -20,24 +20,28 @@ function App() {
             name: "Workout 🦋",
             seconds: 0,
             active: false,
+            firstTime: true,
           },
           {
             id: 1,
             name: "Uni study 🍰",
             seconds: 0,
             active: false,
+            firstTime: true,
           },
           {
             id: 2,
             name: "Coding 🐝",
             seconds: 0,
             active: false,
+            firstTime: true,
           },
           {
             id: 3,
             name: "Reading 🌊",
             seconds: 0,
             active: false,
+            firstTime: true,
           },
         ])
       );

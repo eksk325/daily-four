@@ -19,16 +19,20 @@ function Task({ date, darkmode }) {
     let index = Number(event.target.getAttribute("index"));
 
     for (let i = 0; i < 4; i++) {
-      if (i != index) {
+      if (i !== index) {
         taskArray[i].active = false;
       }
     }
 
     const startTime = new Date();
 
-    if (taskArray[index].active) {
+    if (taskArray[index].firstTime) {
+      runClock(index, startTime);
+      taskArray[index].active = true;
+      taskArray[index].firstTime = false;
+    } else if (taskArray[index].active) {
       taskArray[index].active = false;
-    } else {
+    } else if (!taskArray[index].active) {
       taskArray[index].active = true;
       runClock(index, startTime);
     }
@@ -36,26 +40,24 @@ function Task({ date, darkmode }) {
 
   const runClock = (index, startTime) => {
     const initialTime = taskArray[index].seconds;
+
     clockRunning = setInterval(() => {
       const currentTime = new Date();
-
       if (taskArray[index].active) {
         taskArray[index].seconds =
           initialTime +
           Math.floor((currentTime.getTime() - startTime.getTime()) / 1000);
 
-        var newTaskArray = [];
+        var newTasks = [];
         for (const task of taskArray) {
-          newTaskArray.push(task);
+          newTasks.push(task);
         }
 
-        console.log(newTaskArray);
-
-        setTaskArray(newTaskArray);
+        setTaskArray(newTasks);
       } else {
         clearInterval(clockRunning);
       }
-    });
+    }, 1000);
   };
 
   const getTimeString = (seconds) => {
@@ -73,18 +75,21 @@ function Task({ date, darkmode }) {
   };
 
   useEffect(() => {
-    for (const task of taskArray) {
-      task.active = false;
+    for (let i = 0; i < 4; i++) {
+      taskArray[i].firstTime = true;
+      taskArray[i].active = false;
     }
 
-    // If there is no data for the current date, then we create one here
-    if (localStorage.getItem(date) === null) {
-      localStorage.setItem(date, JSON.stringify(taskArray));
-    }
-  });
+    // Updating the local storage data every 2 seconds
+    setInterval(() => {
+      if (taskArray !== null) {
+        localStorage.setItem(date, JSON.stringify(taskArray));
+      }
+    }, 2000);
+  }, []);
 
   return (
-    <div>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <div className={styles.container}>
         {taskArray.map((task) => (
           <div
