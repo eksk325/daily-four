@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./routes/Home";
-import Past from "./routes/Past";
+import Home from "./Routes/Home";
 
 function App() {
   // Initial settings for user (dark mode preference & tasks)
@@ -52,7 +51,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/past" element={<Past />}></Route>
       </Routes>
     </Router>
   );

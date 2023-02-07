@@ -86,6 +86,7 @@ function Task({ date, darkmode }) {
         localStorage.setItem(date, JSON.stringify(taskArray));
       }
     }, 2000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "../styles/Home.module.css";
 import Task from "../js/Task";
 
@@ -12,8 +11,6 @@ function Home() {
   const [darkmode, setDarkmode] = useState(
     localStorage.getItem("darkmode") === true
   );
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     // Updating the current greeting message, time, and date every second on the interface.
@@ -60,10 +57,6 @@ function Home() {
     }
   };
 
-  const switchToPast = () => {
-    navigate("/past");
-  };
-
   return (
     <div className={darkmode ? styles.darkmode : styles.lightmode}>
       {loading ? (
@@ -75,12 +68,14 @@ function Home() {
         </div>
       ) : (
         <div>
-          <div className={styles.switch} onClick={changeMode}>
-            {darkmode ? (
-              <i className="fa-solid fa-circle-half-stroke"></i>
-            ) : (
-              <i className="fa-regular fa-moon"></i>
-            )}
+          <div className={styles.switchContainer}>
+            <div className={styles.switch} onClick={changeMode}>
+              {darkmode ? (
+                <i className="fa-solid fa-circle-half-stroke"></i>
+              ) : (
+                <i className="fa-regular fa-moon"></i>
+              )}
+            </div>
           </div>
           <div className={styles.banner}>
             <div className={styles.topRow}>

@@ -1,5 +1,6 @@
 * {
   font-family: "Noto Sans JP", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -50,4 +51,20 @@
   margin: 20px;
   font-size: 20px;
   text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .containerDark {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .task {
+    width: 300px;
+  }
 }
