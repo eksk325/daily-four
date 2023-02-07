@@ -67,4 +67,8 @@
   .task {
     width: 300px;
   }
+
+  .taskActive {
+    width: 300px;
+  }
 }
