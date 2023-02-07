@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/daily-four/static/css/main.421e3a52.css",
+    "main.css": "/daily-four/static/css/main.575a6e1f.css",
     "main.js": "/daily-four/static/js/main.00510a16.js",
     "index.html": "/daily-four/index.html",
-    "main.421e3a52.css.map": "/daily-four/static/css/main.421e3a52.css.map",
+    "main.575a6e1f.css.map": "/daily-four/static/css/main.575a6e1f.css.map",
     "main.00510a16.js.map": "/daily-four/static/js/main.00510a16.js.map"
   },
   "entrypoints": [
-    "static/css/main.421e3a52.css",
+    "static/css/main.575a6e1f.css",
     "static/js/main.00510a16.js"
   ]
 }
