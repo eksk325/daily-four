@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/daily-four/static/css/main.d18bd6ae.css",
-    "main.js": "/daily-four/static/js/main.8ce7bd52.js",
+    "main.css": "/daily-four/static/css/main.421e3a52.css",
+    "main.js": "/daily-four/static/js/main.00510a16.js",
     "index.html": "/daily-four/index.html",
-    "main.d18bd6ae.css.map": "/daily-four/static/css/main.d18bd6ae.css.map",
-    "main.8ce7bd52.js.map": "/daily-four/static/js/main.8ce7bd52.js.map"
+    "main.421e3a52.css.map": "/daily-four/static/css/main.421e3a52.css.map",
+    "main.00510a16.js.map": "/daily-four/static/js/main.00510a16.js.map"
   },
   "entrypoints": [
-    "static/css/main.d18bd6ae.css",
-    "static/js/main.8ce7bd52.js"
+    "static/css/main.421e3a52.css",
+    "static/js/main.00510a16.js"
   ]
 }
